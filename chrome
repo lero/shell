@@ -1,0 +1,1 @@
+chromium --disk-cache-dir=/tmp/cache --ignore-gpu-blacklist

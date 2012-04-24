@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo mount /dev/sdb1 /mnt
+sudo rsync -avP --exclude=dev/ --exclude=sys/ --exclude=proc/ --exclude=run/ --exclude=media/ --exclude=mnt/ --exclude=tmp/ / /mnt/
+sudo umount /dev/sdb1 /mnt
