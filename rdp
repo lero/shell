@@ -1,0 +1,1 @@
+rdesktop -u xxxx -d xxxx -p xxxx -g 90% -x 0x80 -r disk:gms=/home/gms/Downloads $1 >/dev/null 2>&1 &
