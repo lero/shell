@@ -1,0 +1,1 @@
+awk -F: '{ sub(/samba/, "xingu", $6); print "useradd -u " $3 " -g " $4 " -d " $6, $1 " -s /bin/false"}' lala | bash
