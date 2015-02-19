@@ -1,0 +1,7 @@
+cd ~/Devel/linux
+git pull
+make silentoldconfig
+make -j5
+sudo cp arch/x86/boot/bzImage /boot/vmlinuz-test
+sudo make modules_install
+sudo mkinitcpio -p test
