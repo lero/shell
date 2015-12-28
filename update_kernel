@@ -1,7 +1,7 @@
-cd ~/Devel/linux
+cd ~/devel/linux
 git pull
 make silentoldconfig
 make -j5
-sudo cp arch/x86/boot/bzImage /boot/vmlinuz-test
+sudo cp arch/x86/boot/bzImage /boot/vmlinuz-linux-dev
 sudo make modules_install
-sudo mkinitcpio -p test
+sudo mkinitcpio -p dev
