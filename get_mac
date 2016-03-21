@@ -1,1 +1,0 @@
-ifconfig eth0 | sed -e's/^.*HWaddr \([^ ]*\) .*$/\1/;t;d'
