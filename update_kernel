@@ -1,6 +1,6 @@
 cd ~/devel/linux
 git pull
-make silentoldconfig
+make olddefconfig
 make -j5
 sudo cp arch/x86/boot/bzImage /boot/vmlinuz-linux-dev
 sudo make modules_install
