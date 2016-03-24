@@ -1,9 +1,6 @@
-#!/usr/bin/env bash
+# prints a spectrum of colors
+# only work in terminals with 24-bit color support
 
-#prints a spectrum of colors
-#only work in terminals with 24-bit color support
-
-#specify which character(s) to print
 tt="▇"
 
 #fit to terminal width

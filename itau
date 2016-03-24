@@ -1,8 +1,8 @@
-#!/bin/bash
-# bypass itau guardiao by moving user-agent to slowlaris ;)
+# bypass itau guardiao moving user-agent to slowlaris ;)
 
 pkill firefox
-echo 'user_pref("general.useragent.override","Mozilla/5.0 (Solaris; Solaris x86_64; rv:45.0) Gecko/20100101 Firefox/45.0");' >> .mozilla/firefox/*.default/prefs.js
+echo 'user_pref("general.useragent.override","Mozilla/5.0 (Solaris; Solaris x86_64; rv:45.0) Gecko/20100101 Firefox/45.0");' >> ~/.mozilla/firefox/*.default/prefs.js
 firefox https://www.itau.com.br/personnalite/
 pkill firefox
 sed -i '/useragent/d' .mozilla/firefox/*.default/prefs.js
+firefox
