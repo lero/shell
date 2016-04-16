@@ -2,7 +2,7 @@
 # switch between hi/low dpi
 # TODO: sed instead of copy?, telegram scaling, kill urxvtd?, setxkbmap/xset not working
 
-files=~/github/dotfiles
+files=/home/gms/github/dotfiles
 
 common(){
     # kill apps that will be reloaded
@@ -38,7 +38,7 @@ common(){
     if [ $mode == hidpi ]; then
         spotify --force-device-scale-factor=1.5 &
     else
-        spotify &
+        spotify --force-device-scale-factor=1.0000001 &
     fi
 
     # sometimes we lose these settings, so force it
