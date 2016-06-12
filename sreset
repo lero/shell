@@ -21,4 +21,4 @@ common(){
   cp $files/.config/chromium-flags-$mode.conf ~/.config/chromium-flags.conf
 }
 
-common >/dev/null 2>&1
+common &>/dev/null

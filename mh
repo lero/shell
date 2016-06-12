@@ -72,4 +72,4 @@ else
     mode=hidpi
 fi
 
-common >/dev/null 2>&1
+common &>/dev/null
