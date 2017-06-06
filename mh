@@ -54,16 +54,20 @@ tv=$(</sys/class/drm/card0/card0-HDMI-A-2/status)
 desk1=$(</sys/class/drm/card0/card0-DP-1/status)
 desk2=$(</sys/class/drm/card0/card0-DP-2/status)
 
-if [ $work == connected ]; then
-    xrandr --output eDP1 --off --output HDMI1 --auto
+if [[ $work == connected ]]; then
+    if [[ $desk2 == connected ]]; then
+        xrandr --output eDP1 --off --output HDMI1 --auto --output DP2 --right-of HDMI1 --auto
+    else
+        xrandr --output eDP1 --off --output HDMI1 --auto
+    fi
     mode=lowdpi
-elif [ $tv == connected ]; then
+elif [[ $tv == connected ]]; then
     xrandr --output eDP1 --off --output HDMI2 --auto
     mode=lowdpi
-elif [ $desk1 == connected ]; then
+elif [[ $desk1 == connected ]]; then
     xrandr --output eDP1 --off --output DP1 --auto
     mode=lowdpi
-elif [ $desk2 == connected ]; then
+elif [[ $desk2 == connected ]]; then
     xrandr --output eDP1 --off --output DP2 --auto
     mode=lowdpi
 else
