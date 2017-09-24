@@ -44,6 +44,7 @@ common(){
     # sometimes we lose these settings, so force it
     setxkbmap -variant intl
     xset r rate 350 35
+    xset -b
 }
 
 export DISPLAY=:0 
